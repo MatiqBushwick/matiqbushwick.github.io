@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефрем Лялин | Композитор, Саунд-дизайнер</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Холст для шейдера. Он должен быть одним из первых элементов в body -->
+<canvas id="shader-canvas"></canvas>
+
+<!-- Основной блок с контентом сайта -->
+<div class="content">
+    <header class="header">
+        <div class="lang-switcher">
+            <a href="index.html" title="Русский"><img src="assets/img/ru-flag.svg" alt="RU"></a>
+            <a href="en.html" title="English"><img src="assets/img/uk-flag.svg" alt="EN"></a>
+        </div>
+        <h1>Ефрем Лялин</h1>
+        <p>Композитор, саунд-дизайнер, звукорежиссер, колорист, режиссер монтажа</p>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="content-grid">
+        <!-- Левая колонка - Музыка -->
+        <section class="music-column">
+            <h2>Список музыкальных композиций</h2>
+            <div class="tracks-list">
+                <!-- Трек 1 -->
+                <div class="track-item">
+                    <div class="track-header">
+                        <span class="track-title">Bjørndalen - Русалка</span>
+                    </div>
+                    <div class="audio-player">
+                        <audio src="assets/audio/RUSALKA master 3.mp3"></audio>
+                        <div class="controls">
+                            <button class="play-btn">▶</button>
+                            <div class="progress-container">
+                                <input type="range" class="progress" value="0" step="0.01">
+                            </div>
+                            <input type="range" class="volume" min="0" max="1" value="0.7" step="0.01">
+                            <span class="time">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                    <p class="track-description">Тяжесть подводной жизни</p>
+                    <p>Жанры: русский рок, нео-фолк</p>
+                </div>
+                
+                <!-- Трек 2 -->
+                <div class="track-item">
+                    <div class="track-header">
+                        <span class="track-title">Eraunica - pomnish</span>
+                    </div>
+                    <div class="audio-player">
+                        <audio src="assets/audio/p3.3 master.mp3"></audio>
+                        <div class="controls">
+                            <button class="play-btn">▶</button>
+                            <div class="progress-container">
+                                <input type="range" class="progress" value="0" step="0.01">
+                            </div>
+                            <input type="range" class="volume" min="0" max="1" value="0.7" step="0.01">
+                            <span class="time">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                    <p class="track-description">Навеяная поп-музыкой 10-х годов, переосмысленная работа</p>
+                    <p>Пост-продакшн, сведение и мастеринг. Жанры: Арт-поп, пост-рейв</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Правая колонка - Видео -->
+        <section class="video-column">
+            <h2>Список видео клипов</h2>
+            <div class="videos-list">
+                <!-- Видео 1 -->
+                <div class="video-item">
+                    <iframe 
+                        data-src="https://player.vimeo.com/video/VIDEO_ID" 
+                        frameborder="0"
+                        allow="autoplay; fullscreen"
+                        loading="lazy">
+                    </iframe>
+                    <p class="video-description">Описание видео...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Контакты -->
+    <footer class="footer">
+        <div class="contacts">
+            <h2>Для связи:</h2>
+            <p>Telegram: <a href="https://t.me/yefraym">@yefraym</a> (отвечаю быстро)</p>
+            <p>E-mail: <a href="mailto:yfro@proton.me">yfro@proton.me</a> (отвечаю медленно)</p>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2025 Ефрем Лялин. Все права защищены.</p>
+            <a href="#" class="home-btn">Наверх</a>
+        </div>
+    </footer>
+</div> <!-- Конец блока .content -->
+
+<!-- ПРАВИЛЬНОЕ МЕСТО ДЛЯ ВСЕХ СКРИПТОВ -->
+<!-- Они должны быть в конце body, чтобы страница сначала загрузилась, а потом выполнился код -->
+<script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+<script src="assets/js/players.js"></script>
+<script src="assets/js/main.js"></script> 
+<script src="assets/js/shader-init.js"></script>
+
+</body>
+</html>
